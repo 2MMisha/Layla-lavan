@@ -2,16 +2,128 @@
 <html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>הלילה הלבן – תחרות מוזיקה</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <title>הלילה הלבן – תחרות מוזיקה</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Rubik", sans-serif;
+            background: #0f0f1a;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #111;
+            padding: 25px 15px;
+            text-align: center;
+            border-bottom: 1px solid #2a2a2a;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: #bdbdbd;
+            font-size: 1.1rem;
+        }
+
+        nav {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 6px 14px;
+            border-radius: 20px;
+            background: #1e1e1e;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background: #6c63ff;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #6c63ff;
+            display: inline-block;
+            padding-bottom: 6px;
+        }
+
+        p {
+            color: #d0d0d0;
+            max-width: 800px;
+        }
+
+        .iframe-wrapper {
+            margin-top: 25px;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background: #000;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #333;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 15px;
+            background: #0a0a0a;
+            color: #888;
+            font-size: 0.9rem;
+            margin-top: 60px;
+        }
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.7rem;
+            }
+
+            nav {
+                gap: 10px;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<header class="header">
+<header>
     <h1>הלילה הלבן</h1>
-    <p>תחרות מוזיקה – במה פתוחה ליוצרים ומבצעים</p>
+    <p>תחרות מוזיקה פתוחה – במה ליוצרים ולמבצעים</p>
 
     <nav>
         <a href="#registration">הרשמה</a>
@@ -21,57 +133,47 @@
     </nav>
 </header>
 
-<section class="section">
-    <h2>אודות האירוע</h2>
-    <p>
-        "הלילה הלבן" הוא אירוע מוזיקלי פתוח לקהל הרחב, המאפשר למבצעים ויוצרים להופיע על במה מקצועית
-        במסגרת אירוע תרבותי חד-פעמי.
-    </p>
-</section>
-
-<section id="registration" class="section">
+<section id="registration">
     <h2>הרשמה</h2>
-    <p>ההרשמה מתבצעת באמצעות הטופס המקוון.</p>
+    <p>ההרשמה מתבצעת באמצעות הטופס המקוון:</p>
 
-    <iframe 
-        src="https://registration.ristar.co//index.htmlלילה$לבן"
-        width="100%" 
-        height="700"
-        frameborder="0">
-    </iframe>
+    <div class="iframe-wrapper">
+        <iframe 
+            src="https://registration.ristar.co/לילה$לבן/index.html"
+            loading="lazy"
+            allowfullscreen>
+        </iframe>
+    </div>
 </section>
 
-<section id="results" class="section">
+<section id="results">
     <h2>תוצאות</h2>
     <p>תוצאות התחרות יפורסמו כאן לאחר סיום שלב ההופעות.</p>
 
-    <iframe 
-        src="https://results.ristar.co/placeholder.html"
-        width="100%" 
-        height="500"
-        frameborder="0">
-    </iframe>
+    <div class="iframe-wrapper">
+        <iframe 
+            src="https://results.ristar.co/placeholder.html"
+            loading="lazy">
+        </iframe>
+    </div>
 </section>
 
-<section id="lineup" class="section">
+<section id="lineup">
     <h2>ליינאפ</h2>
-    <p>
-        סדר ההופעות יפורסם לאחר סגירת ההרשמה.
-    </p>
+    <p>סדר ההופעות יפורסם לאחר סגירת ההרשמה.</p>
 </section>
 
-<section id="rules" class="section">
+<section id="rules">
     <h2>תקנון</h2>
     <p>
-        ההשתתפות בתחרות כפופה לתקנון הרשמי.
+        <a href="tekanon-layla-lavan.pdf" target="_blank">
+            לצפייה בתקנון המלא (PDF)
+        </a>
     </p>
-    <a href="tekanon-layla-lavan.pdf" target="_blank">
-        לצפייה בתקנון המלא (PDF)
-    </a>
 </section>
 
 <footer>
-    <p>© הלילה הלבן — כל הזכויות שמורות</p>
+    © כל הזכויות שמורות – הלילה הלבן
 </footer>
 
 </body>
