@@ -14,7 +14,7 @@
 
         body {
             font-family: "Rubik", sans-serif;
-            background: #0f0f1a;
+            background: #0e0e14;
             color: #ffffff;
             line-height: 1.6;
         }
@@ -28,30 +28,28 @@
 
         header h1 {
             font-size: 2.2rem;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         header p {
-            color: #bdbdbd;
-            font-size: 1.1rem;
+            color: #bbb;
         }
 
         nav {
             margin-top: 15px;
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 16px;
             flex-wrap: wrap;
         }
 
         nav a {
-            color: #ffffff;
+            color: #fff;
             text-decoration: none;
-            font-weight: 500;
-            padding: 6px 14px;
+            background: #1f1f1f;
+            padding: 8px 16px;
             border-radius: 20px;
-            background: #1e1e1e;
-            transition: 0.3s;
+            transition: 0.2s;
         }
 
         nav a:hover {
@@ -60,60 +58,78 @@
 
         section {
             max-width: 1100px;
-            margin: 60px auto;
+            margin: 70px auto;
             padding: 0 20px;
         }
 
         h2 {
-            margin-bottom: 20px;
             font-size: 1.8rem;
+            margin-bottom: 20px;
             border-bottom: 2px solid #6c63ff;
             display: inline-block;
             padding-bottom: 6px;
         }
 
         p {
-            color: #d0d0d0;
-            max-width: 800px;
+            color: #ccc;
+            margin-bottom: 20px;
         }
 
         .iframe-wrapper {
-            margin-top: 25px;
             width: 100%;
-            aspect-ratio: 16 / 9;
+            height: 85vh;
+            min-height: 700px;
             background: #000;
-            border-radius: 12px;
+            border-radius: 14px;
             overflow: hidden;
             border: 1px solid #333;
+            position: relative;
+        }
+
+        .iframe-toolbar {
+            display: flex;
+            justify-content: flex-end;
+            padding: 10px;
+            background: #151515;
+            border-bottom: 1px solid #2b2b2b;
+        }
+
+        .open-btn {
+            background: #6c63ff;
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            transition: 0.2s;
+        }
+
+        .open-btn:hover {
+            background: #837cff;
         }
 
         iframe {
             width: 100%;
-            height: 100%;
+            height: calc(100% - 46px);
             border: none;
         }
 
         footer {
-            text-align: center;
-            padding: 30px 15px;
             background: #0a0a0a;
             color: #888;
+            text-align: center;
+            padding: 30px 15px;
+            margin-top: 80px;
             font-size: 0.9rem;
-            margin-top: 60px;
         }
 
-        /* MOBILE */
         @media (max-width: 768px) {
             header h1 {
                 font-size: 1.7rem;
             }
 
-            nav {
-                gap: 10px;
-            }
-
-            h2 {
-                font-size: 1.5rem;
+            .iframe-wrapper {
+                height: 80vh;
             }
         }
     </style>
@@ -123,7 +139,7 @@
 
 <header>
     <h1>הלילה הלבן</h1>
-    <p>תחרות מוזיקה פתוחה – במה ליוצרים ולמבצעים</p>
+    <p>תחרות מוזיקה – במה פתוחה ליוצרים ומבצעים</p>
 
     <nav>
         <a href="#registration">הרשמה</a>
@@ -135,14 +151,15 @@
 
 <section id="registration">
     <h2>הרשמה</h2>
-    <p>ההרשמה מתבצעת באמצעות הטופס המקוון:</p>
+    <p>ההרשמה מתבצעת באמצעות הטופס המקוון.</p>
 
     <div class="iframe-wrapper">
-        <iframe 
-            src="https://registration.ristar.co/לילה$לבן-רביבים/index.html"
-            loading="lazy"
-            allowfullscreen>
-        </iframe>
+        <div class="iframe-toolbar">
+            <a class="open-btn" href="https://registration.ristar.co/לילה$לבן/index.html" target="_blank">
+                פתח בטאב חדש
+            </a>
+        </div>
+        <iframe src="https://registration.ristar.co/לילה$לבן/index.html" loading="lazy"></iframe>
     </div>
 </section>
 
@@ -151,10 +168,12 @@
     <p>תוצאות התחרות יפורסמו כאן לאחר סיום שלב ההופעות.</p>
 
     <div class="iframe-wrapper">
-        <iframe 
-            src="https://results.ristar.co/placeholder.html"
-            loading="lazy">
-        </iframe>
+        <div class="iframe-toolbar">
+            <a class="open-btn" href="https://results.ristar.co/placeholder.html" target="_blank">
+                פתח בטאב חדש
+            </a>
+        </div>
+        <iframe src="https://results.ristar.co/placeholder.html" loading="lazy"></iframe>
     </div>
 </section>
 
@@ -173,7 +192,7 @@
 </section>
 
 <footer>
-    © כל הזכויות שמורות – הלילה הלבן
+    © הלילה הלבן · כל הזכויות שמורות
 </footer>
 
 </body>
