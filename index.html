@@ -54,6 +54,7 @@
             font-size: 1.05rem;
             border-radius: 8px;
             transition: 0.2s;
+            word-break: break-word;
         }
 
         .btn:hover {
@@ -110,6 +111,7 @@
             border-radius: 8px;
             font-size: 0.9rem;
             transition: 0.2s;
+            word-break: break-word;
         }
 
         .promo-btn:hover {
@@ -124,11 +126,50 @@
             background: #444;
         }
 
+        /* ===== Адаптив ===== */
         @media (max-width: 900px) {
             .side-promo {
                 position: static;
                 width: auto;
                 margin: 30px auto;
+                transform: none;
+            }
+
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            header p {
+                font-size: 0.95rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .btn, .promo-btn {
+                padding: 12px 20px;
+                font-size: 1rem;
+            }
+
+            section {
+                margin: 40px auto;
+                padding: 0 15px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+
+            .btn, .promo-btn {
+                padding: 10px 16px;
+                font-size: 0.95rem;
             }
         }
     </style>
@@ -170,6 +211,14 @@
     <p>התוצאות יפורסמו לאחר סיום ההופעות</p>
     <a class="btn" href="https://results.ristar.co/placeholder.html" target="_blank">
         לצפייה בתוצאות
+    </a>
+</section>
+
+<section>
+    <h2>תְּקָנוֹן</h2>
+    <p>להורדת התּקָנוֹן בלחיצה על הכפתור:</p>
+    <a class="btn" href="layla-tekanon.pdf" target="_blank">
+        הורד את התּקָנוֹן
     </a>
 </section>
 
